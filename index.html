@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    if (location.protocol === 'file:' || new URLSearchParams(location.search).has('offline-model')) {
+      document.write('<script src="ergoneck-model-data.js"><\/script>');
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -23,7 +29,7 @@
       <a href="#benefits">Преимущества</a>
       <a href="#prototype">Прототип</a>
     </nav>
-    <a class="header-cta" href="#support">Поддержать проект</a>
+    <a class="header-cta" href="#purchase">Купить ErgoNeck</a>
     <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span>
     </button>
@@ -35,7 +41,7 @@
     <a href="#benefits">Преимущества <span>03</span></a>
     <a href="#work">Как работает <span>04</span></a>
     <a href="#prototype">Прототип <span>05</span></a>
-    <a class="mobile-support" href="#support">Поддержать проект</a>
+    <a class="mobile-support" href="#purchase">Купить ErgoNeck</a>
   </nav>
 
   <main id="top">
@@ -57,7 +63,7 @@
       </div>
       <div class="hero-visual" aria-label="3D-модель ErgoNeck">
         <div class="visual-label">PROTOTYPE / 01</div>
-        <img src="ergoneck-prototype.png" alt="3D-модель устройства ErgoNeck и технический чертёж" width="1365" height="768">
+        <img src="ergoneck-hero.jpg" alt="Прототип ErgoNeck и технический чертёж" width="1280" height="720">
         <div class="angle-chip">Оптимальный угол <strong>0–15°</strong></div>
       </div>
     </section>
@@ -71,18 +77,10 @@
         <h2>Гаджет ниже.<br><span>Нагрузка выше.</span></h2>
       </div>
       <div class="problem-layout">
-        <div class="angle-diagram reveal" aria-label="Схема наклона головы">
-          <div class="diagram-grid"></div>
-          <div class="silhouette">
-            <svg viewBox="0 0 360 420" role="img" aria-label="Силуэт человека с наклонённой головой">
-              <circle cx="195" cy="90" r="53"/>
-              <path d="M165 131c-10 38-2 60 23 80 38 31 47 73 45 156"/>
-              <path d="M168 196c-62 15-96 70-104 171"/>
-              <path d="M190 204c30 13 56 36 75 70"/>
-              <path class="phone" d="M266 265l42 15-27 76-43-15z"/>
-            </svg>
-          </div>
-          <div class="angle-arc"><span>35°</span></div>
+        <div class="angle-diagram reveal" aria-label="Визуальный анализ наклона головы при работе со смартфоном">
+          <img class="posture-image" src="posture-analysis.png" alt="Человек с наклонённой вперёд головой использует смартфон; показана нагрузка на шейный отдел">
+          <div class="posture-shade" aria-hidden="true"></div>
+          <div class="posture-angle">35°</div>
           <div class="axis-label axis-x">ОСЬ X</div>
           <div class="axis-label axis-y">ОСЬ Y</div>
           <div class="diagram-note">Типичный наклон<br>при работе со смартфоном</div>
@@ -224,12 +222,18 @@
       </div>
       <div class="prototype-grid">
         <figure class="prototype-panel model-panel reveal">
-          <figcaption><span>3D MODEL / FRONT</span><strong>Объёмная модель</strong></figcaption>
-          <div class="crop-view crop-left"><img src="ergoneck-prototype.png" alt="3D-модель ErgoNeck"></div>
+          <figcaption><span>3D MODEL / INTERACTIVE</span><strong>Объёмная модель</strong></figcaption>
+          <div class="prototype-view interactive-view" data-modal-type="model" role="button" tabindex="0" aria-label="Открыть интерактивную 3D-модель на весь экран">
+            <model-viewer data-model-src="ergoneck-model.glb" alt="Интерактивная 3D-модель шейного ортеза ErgoNeck" camera-controls auto-rotate rotation-per-second="14deg" camera-orbit="28deg 68deg 135%" field-of-view="32deg" interaction-prompt="none" environment-image="neutral" shadow-intensity="1.5" exposure="0.56"></model-viewer>
+            <span class="expand-hint"><i>↗</i> Открыть и вращать</span>
+          </div>
         </figure>
         <figure class="prototype-panel drawing-panel reveal">
           <figcaption><span>BLUEPRINT / V4.1</span><strong>Технический чертёж</strong></figcaption>
-          <div class="crop-view crop-right"><img src="ergoneck-prototype.png" alt="Технический чертёж ErgoNeck"></div>
+          <div class="prototype-view interactive-view" data-modal-type="blueprint" role="button" tabindex="0" aria-label="Открыть технический чертёж на весь экран">
+            <img src="ergoneck-blueprint.jpg" alt="Технический чертёж ErgoNeck с размерами и обозначениями">
+            <span class="expand-hint"><i>↗</i> Увеличить чертёж</span>
+          </div>
         </figure>
       </div>
       <div class="prototype-note reveal">
@@ -239,17 +243,31 @@
       </div>
     </section>
 
-    <section class="final-cta" id="support">
+    <section class="final-cta" id="purchase">
       <div class="cta-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="cta-content reveal">
         <p class="section-index light">ERGO / NECK / PROJECT</p>
         <h2>Простая механика<br><span>полезной привычки</span></h2>
         <p>ErgoNeck делает работу с гаджетами более осознанной и комфортной.</p>
-        <button class="button support-button" id="support-button" type="button">Поддержать проект <span>↗</span></button>
-        <p class="support-status" id="support-status" role="status" aria-live="polite"></p>
+        <button class="button purchase-button" id="purchase-button" type="button">Купить ErgoNeck <span>↗</span></button>
+        <p class="purchase-status" id="purchase-status" role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>
+
+  <dialog class="media-modal" id="media-modal" aria-labelledby="modal-title">
+    <div class="modal-shell">
+      <div class="modal-head">
+        <div>
+          <span class="modal-kicker" id="modal-kicker">ERGO / NECK</span>
+          <strong id="modal-title">Просмотр</strong>
+        </div>
+        <button class="modal-close" type="button" aria-label="Закрыть просмотр">×</button>
+      </div>
+      <div class="modal-stage" id="modal-stage"></div>
+      <p class="modal-help" id="modal-help"></p>
+    </div>
+  </dialog>
 
   <footer>
     <a class="brand footer-brand" href="#top"><span class="brand-mark">E</span><span>ErgoNeck</span></a>

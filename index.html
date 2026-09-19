@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a31">
+  <meta name="description" content="ErgoNeck — лёгкое механическое устройство для контроля положения головы без электроники.">
+  <title>ErgoNeck — держи голову выше</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23071a31'/%3E%3Cpath d='M17 16h31v9H27v8h18v8H27v8h21v9H17z' fill='%2358c8ff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ErgoNeck — на главную">
+      <span class="brand-mark">E</span><span>ErgoNeck</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#problem">Проблема</a>
+      <a href="#solution">Решение</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#prototype">Прототип</a>
+    </nav>
+    <a class="header-cta" href="#support">Поддержать проект</a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" aria-hidden="true">
+    <a href="#problem">Проблема <span>01</span></a>
+    <a href="#solution">Решение <span>02</span></a>
+    <a href="#benefits">Преимущества <span>03</span></a>
+    <a href="#work">Как работает <span>04</span></a>
+    <a href="#prototype">Прототип <span>05</span></a>
+    <a class="mobile-support" href="#support">Поддержать проект</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Механика осознанной осанки</div>
+        <h1>Ergo<span>Neck</span></h1>
+        <p class="hero-lead">Держи голову выше —<br>работай комфортнее</p>
+        <p class="hero-description">Лёгкое механическое устройство для контроля положения головы без электроники.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#solution">Узнать больше <span>↘</span></a>
+          <a class="button button-secondary" href="#prototype">Посмотреть прототип</a>
+        </div>
+        <div class="hero-metrics">
+          <div><strong>0–15°</strong><span>рабочий диапазон</span></div>
+          <div><strong>&lt; 30 сек</strong><span>время надевания</span></div>
+          <div><strong>0%</strong><span>электроники</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="3D-модель ErgoNeck">
+        <div class="visual-label">PROTOTYPE / 01</div>
+        <img src="ergoneck-prototype.png" alt="3D-модель устройства ErgoNeck и технический чертёж" width="1365" height="768">
+        <div class="angle-chip">Оптимальный угол <strong>0–15°</strong></div>
+      </div>
+    </section>
+    <section class="preview-strip" aria-label="Кратко о проекте">
+      <span>Лёгкий</span><i></i><span>Механический</span><i></i><span>Регулируемый</span><i></i><span>Доступный</span>
+    </section>
+
+    <section class="problem section" id="problem">
+      <div class="section-head reveal">
+        <p class="section-index">01 / ПРОБЛЕМА</p>
+        <h2>Гаджет ниже.<br><span>Нагрузка выше.</span></h2>
+      </div>
+      <div class="problem-layout">
+        <div class="angle-diagram reveal" aria-label="Схема наклона головы">
+          <div class="diagram-grid"></div>
+          <div class="silhouette">
+            <svg viewBox="0 0 360 420" role="img" aria-label="Силуэт человека с наклонённой головой">
+              <circle cx="195" cy="90" r="53"/>
+              <path d="M165 131c-10 38-2 60 23 80 38 31 47 73 45 156"/>
+              <path d="M168 196c-62 15-96 70-104 171"/>
+              <path d="M190 204c30 13 56 36 75 70"/>
+              <path class="phone" d="M266 265l42 15-27 76-43-15z"/>
+            </svg>
+          </div>
+          <div class="angle-arc"><span>35°</span></div>
+          <div class="axis-label axis-x">ОСЬ X</div>
+          <div class="axis-label axis-y">ОСЬ Y</div>
+          <div class="diagram-note">Типичный наклон<br>при работе со смартфоном</div>
+        </div>
+        <div class="problem-copy reveal">
+          <p class="large-copy">При долгой работе с гаджетами голова незаметно наклоняется вперёд.</p>
+          <div class="impact-row">
+            <span class="impact-icon">01</span>
+            <div><strong>Усталость</strong><p>Дольше держать позу становится сложнее.</p></div>
+          </div>
+          <div class="impact-row">
+            <span class="impact-icon">02</span>
+            <div><strong>Напряжение</strong><p>Мышцы шеи и плеч работают интенсивнее.</p></div>
+          </div>
+          <div class="impact-row">
+            <span class="impact-icon">03</span>
+            <div><strong>Дискомфорт</strong><p>Фокус на задаче уступает желанию сменить позу.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution section dark-section" id="solution">
+      <div class="section-head reveal">
+        <p class="section-index light">02 / НАШЕ РЕШЕНИЕ</p>
+        <h2>Мягкая опора.<br><span>Без лишней сложности.</span></h2>
+      </div>
+      <div class="solution-grid">
+        <div class="solution-statement reveal">
+          <p>ErgoNeck мягко ограничивает чрезмерный наклон головы и помогает сохранять более комфортное положение.</p>
+          <div class="range-display">
+            <span class="range-min">0°</span>
+            <div class="range-line"><i></i></div>
+            <span class="range-max">15°</span>
+          </div>
+          <small>Рекомендуемый рабочий диапазон</small>
+        </div>
+        <div class="spec-stack">
+          <article class="spec-card reveal">
+            <div class="spec-number">01</div>
+            <div><strong>Мягкое ограничение</strong><p>Конструкция даёт тактильную подсказку, когда наклон становится чрезмерным.</p></div>
+          </article>
+          <article class="spec-card reveal">
+            <div class="spec-number">02</div>
+            <div><strong>Быстрая фиксация</strong><p>Наденьте и настройте устройство менее чем за 30 секунд.</p></div>
+          </article>
+          <article class="spec-card reveal">
+            <div class="spec-number">03</div>
+            <div><strong>Полная автономность</strong><p>Механический принцип — никаких датчиков, приложений и зарядки.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section" id="benefits">
+      <div class="section-head reveal">
+        <p class="section-index">03 / ПРЕИМУЩЕСТВА</p>
+        <h2>Технологично —<br><span>не значит сложно.</span></h2>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card benefit-featured reveal" data-tilt>
+          <div class="card-top"><span>NO.01</span><i>↗</i></div>
+          <div class="battery-icon" aria-hidden="true"><span></span></div>
+          <h3>Без электроники</h3>
+          <p>Работает всегда. Не требует зарядки, синхронизации или обслуживания.</p>
+        </article>
+        <article class="benefit-card reveal" data-tilt>
+          <div class="card-top"><span>NO.02</span><i>↗</i></div>
+          <div class="card-value">≤ 5000 <small>₸</small></div>
+          <h3>Доступная стоимость</h3>
+          <p>Простая конструкция и доступные материалы удерживают цену прототипа в пределах бюджета.</p>
+        </article>
+        <article class="benefit-card reveal" data-tilt>
+          <div class="card-top"><span>NO.03</span><i>↗</i></div>
+          <div class="material-swatch"><span></span><span></span><span></span></div>
+          <h3>Комфортные материалы</h3>
+          <p>Лёгкие гипоаллергенные материалы в зонах контакта с кожей.</p>
+        </article>
+        <article class="benefit-card reveal" data-tilt>
+          <div class="card-top"><span>NO.04</span><i>↗</i></div>
+          <div class="adjust-icon"><span></span><span></span><span></span></div>
+          <h3>Точная регулировка</h3>
+          <p>Ремни и высота опоры настраиваются индивидуально.</p>
+        </article>
+        <article class="benefit-card benefit-wide reveal" data-tilt>
+          <div class="card-top"><span>NO.05</span><i>↗</i></div>
+          <div class="wide-content"><div><h3>Просто изготовить.<br>Легко использовать.</h3><p>Минимум деталей, понятная сборка и быстрый старт.</p></div><div class="parts-count"><strong>03</strong><span>ключевых<br>элемента</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="section-head reveal">
+        <p class="section-index">04 / КАК ЭТО РАБОТАЕТ</p>
+        <h2>Три шага<br><span>к более правильной позе.</span></h2>
+      </div>
+      <div class="steps">
+        <article class="step reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 24c15-9 35-9 50 0l8 13v32c0 21-17 38-38 38S22 90 22 69V37z"/><path d="M32 45c17 8 39 8 56 0M39 67h42"/></svg></div>
+          <h3>Надень</h3>
+          <p>Расположи мягкую опору вокруг шеи.</p>
+        </article>
+        <div class="step-connector" aria-hidden="true"><span>→</span></div>
+        <article class="step reveal">
+          <div class="step-number">02</div>
+          <div class="step-icon"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M23 38h74M23 60h74M23 82h74"/><circle cx="48" cy="38" r="8"/><circle cx="76" cy="60" r="8"/><circle cx="56" cy="82" r="8"/></svg></div>
+          <h3>Отрегулируй</h3>
+          <p>Настрой ремни и высоту опоры под себя.</p>
+        </article>
+        <div class="step-connector" aria-hidden="true"><span>→</span></div>
+        <article class="step reveal">
+          <div class="step-number">03</div>
+          <div class="step-icon"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="59" cy="31" r="15"/><path d="M59 46v29M35 106c2-25 10-38 24-38 15 0 24 13 26 38M73 70l23 9-11 27-25-10"/></svg></div>
+          <h3>Работай</h3>
+          <p>Пользуйся гаджетом в более осознанном положении.</p>
+        </article>
+      </div>
+      <div class="time-band reveal"><span>Весь процесс занимает</span><strong>менее 30 секунд</strong><span>без приложений и настроек</span></div>
+    </section>
+
+    <section class="audience section">
+      <div class="section-head reveal">
+        <p class="section-index">05 / ДЛЯ КОГО</p>
+        <h2>Для тех, кто проводит<br><span>время перед экраном.</span></h2>
+      </div>
+      <div class="audience-list">
+        <article class="audience-item reveal"><span>01</span><h3>Школьники</h3><p>Учёба, чтение и онлайн-задания</p><i>↗</i></article>
+        <article class="audience-item reveal"><span>02</span><h3>Студенты</h3><p>Конспекты, лекции и подготовка</p><i>↗</i></article>
+        <article class="audience-item reveal"><span>03</span><h3>Офисные сотрудники</h3><p>Задачи на телефоне и планшете</p><i>↗</i></article>
+        <article class="audience-item reveal"><span>04</span><h3>Активные пользователи</h3><p>Все, кто долго пользуется гаджетами</p><i>↗</i></article>
+      </div>
+    </section>
+
+    <section class="prototype section dark-section" id="prototype">
+      <div class="section-head reveal">
+        <p class="section-index light">06 / ПРОТОТИП</p>
+        <h2>От идеи —<br><span>к испытаниям.</span></h2>
+      </div>
+      <div class="prototype-grid">
+        <figure class="prototype-panel model-panel reveal">
+          <figcaption><span>3D MODEL / FRONT</span><strong>Объёмная модель</strong></figcaption>
+          <div class="crop-view crop-left"><img src="ergoneck-prototype.png" alt="3D-модель ErgoNeck"></div>
+        </figure>
+        <figure class="prototype-panel drawing-panel reveal">
+          <figcaption><span>BLUEPRINT / V4.1</span><strong>Технический чертёж</strong></figcaption>
+          <div class="crop-view crop-right"><img src="ergoneck-prototype.png" alt="Технический чертёж ErgoNeck"></div>
+        </figure>
+      </div>
+      <div class="prototype-note reveal">
+        <span class="note-symbol">i</span>
+        <p><strong>Концептуальная модель.</strong> Конструкция и размеры будут уточнены после испытаний.</p>
+        <span class="note-code">REV. 01 / 2026</span>
+      </div>
+    </section>
+
+    <section class="final-cta" id="support">
+      <div class="cta-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="cta-content reveal">
+        <p class="section-index light">ERGO / NECK / PROJECT</p>
+        <h2>Простая механика<br><span>полезной привычки</span></h2>
+        <p>ErgoNeck делает работу с гаджетами более осознанной и комфортной.</p>
+        <button class="button support-button" id="support-button" type="button">Поддержать проект <span>↗</span></button>
+        <p class="support-status" id="support-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">E</span><span>ErgoNeck</span></a>
+    <p>Эргономический прототип, не является медицинским изделием.</p>
+    <a href="#top">Наверх ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
